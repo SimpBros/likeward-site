@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Likeward — If it's not you, it's gone.</title>
+<meta name="description" content="Likeward watches your face, voice and name across social platforms, ad libraries and the web. A human confirms every fake, and we handle the takedowns.">
+<style>
+:root{--ink:#0b1220;--ink2:#121b2e;--line:#22304d;--text:#e8eefc;--mute:#9fb0d0;--mint:#3ef0b5;--mint2:#1fc996;--warn:#ffb547;--card:#0f1828}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:var(--ink);color:var(--text);line-height:1.55}
+a{color:var(--mint)}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;background:rgba(11,18,32,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--text);text-decoration:none}
+.nav nav a{color:var(--mute);text-decoration:none;margin-left:22px;font-size:15px}.nav nav a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--mint);color:#04241a;font-weight:700;padding:13px 22px;border-radius:10px;text-decoration:none;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.hero{padding:84px 0 56px;background:radial-gradient(900px 420px at 80% -10%,rgba(62,240,181,.16),transparent 60%),radial-gradient(700px 400px at -10% 20%,rgba(80,120,255,.14),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);border:1px solid rgba(62,240,181,.35);padding:6px 10px;border-radius:999px}
+h1{font-size:58px;line-height:1.04;letter-spacing:-.035em;margin:18px 0 16px}
+h1 span{color:var(--mint)}.lead{font-size:20px;color:var(--mute);max-width:600px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.small{font-size:13px;color:var(--mute);margin-top:12px}
+.panel{background:linear-gradient(180deg,#111c31,#0d1626);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.ph{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-bottom:12px}
+.hit{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#4c6fff,#3ef0b5);flex:none}
+.hit b{display:block;font-size:14px}.hit small{color:var(--mute);font-size:12px}
+.tag{margin-left:auto;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;white-space:nowrap}
+.t-red{background:rgba(255,90,90,.15);color:#ff8a8a}.t-amb{background:rgba(255,181,71,.15);color:var(--warn)}.t-grn{background:rgba(62,240,181,.15);color:var(--mint)}
+section{padding:72px 0;border-top:1px solid var(--line)}h2{font-size:38px;letter-spacing:-.02em;margin:0 0 10px}.sub{color:var(--mute);font-size:18px;margin:0 0 36px;max-width:720px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card h3{margin:10px 0 6px;font-size:17px}.card p{margin:0;color:var(--mute);font-size:14.5px}
+.ic{width:38px;height:38px;border-radius:10px;background:rgba(62,240,181,.12);display:grid;place-items:center;color:var(--mint);font-weight:800}
+.step{counter-increment:s}.step .ic::before{content:counter(s)}.steps{counter-reset:s}
+.seg .card h3{margin-top:0}.seg .q{font-size:13px;color:var(--warn);margin-top:10px}
+.price{display:flex;flex-direction:column}.price .amt{font-size:36px;font-weight:800;margin:6px 0}.price .amt small{font-size:15px;color:var(--mute);font-weight:500}
+.price ul{padding-left:18px;color:var(--mute);font-size:14px;margin:10px 0 0}.price li{margin:5px 0}.price.hot{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint) inset}
+.badge{font-size:11px;font-weight:800;color:#04241a;background:var(--mint);padding:3px 8px;border-radius:6px;align-self:flex-start}
+.promise{display:grid;grid-template-columns:1fr 1fr;gap:16px}.promise .card p{font-size:15px}
+.check{background:linear-gradient(135deg,rgba(62,240,181,.12),rgba(76,111,255,.12));border:1px solid var(--line);border-radius:18px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+form input,form select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#0b1322;color:var(--text);font-size:15px;margin-bottom:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}details p{color:var(--mute);margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:13px}
+@media(max-width:900px){.hero-grid,.check,.promise{grid-template-columns:1fr}.g5,.g4,.g3{grid-template-columns:1fr 1fr}h1{font-size:42px}.nav nav{display:none}}
+</style>
+</head>
+<body><div style="background:#5b2a00;color:#fff;font:600 14px/1.4 system-ui,sans-serif;padding:10px 16px;text-align:center">PREVIEW COPY: this site is not open for business yet. Nothing here is a live offer, and the contact options are not monitored yet.</div>
+<header><div class="wrap nav">
+<a class="logo" href="#"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l12 5v8c0 7.5-5.2 13-12 15C9.2 28 4 22.5 4 15V7z" fill="none" stroke="#3ef0b5" stroke-width="2.4"/><circle cx="16" cy="13" r="4" fill="#3ef0b5"/><path d="M9.5 23c1.6-3.2 3.9-4.8 6.5-4.8s4.9 1.6 6.5 4.8" fill="none" stroke="#3ef0b5" stroke-width="2.4" stroke-linecap="round"/></svg>Likeward</a>
+<nav><a href="#watch">What we watch</a><a href="#how">How it works</a><a href="#who">Who it's for</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+<a class="btn" href="#check">Free exposure check</a>
+</div></header>
+
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<span class="eyebrow">Deepfake &amp; impersonation watch</span>
+<h1>If it's not you,<br><span>it's gone.</span></h1>
+<p class="lead">Likeward watches your face, voice and name across social media, ad libraries and the web. A real person confirms every fake, and we handle the takedown, so your followers, clients and staff only ever hear from the real you.</p>
+<div class="cta"><a class="btn" href="#check">Get a free exposure check</a><a class="btn ghost" href="#pricing">See pricing</a></div>
+<p class="small">No login. No card. We send you the list of fakes we find, and it's yours to keep.</p>
+</div>
+<div class="panel" aria-label="Example Likeward alert feed">
+<div class="ph"><span>Today's sweep · 7 platforms</span><span>Example</span></div>
+<div class="hit"><div class="av"></div><div><b>@yourname.backup</b><small>Instagram · copied photo · "DM me to book"</small></div><span class="tag t-red">Confirmed fake</span></div>
+<div class="hit"><div class="av" style="background:linear-gradient(135deg,#ff7a59,#ffb547)"></div><div><b>Sponsored video ad</b><small>Meta Ad Library · AI video of your face</small></div><span class="tag t-red">Reported</span></div>
+<div class="hit"><div class="av" style="background:linear-gradient(135deg,#9b5cff,#4c6fff)"></div><div><b>yourbrand-official.com</b><small>New domain · copies your testimonials</small></div><span class="tag t-amb">Human review</span></div>
+<div class="hit"><div class="av" style="background:linear-gradient(135deg,#3ef0b5,#1fc996)"></div><div><b>Fake TikTok account</b><small>Filed Tue · re-checked Thu</small></div><span class="tag t-grn">Removed</span></div>
+</div>
+</div></div>
+
+<section id="watch"><div class="wrap">
+<h2>Five ways people fake you. We watch all five.</h2>
+<p class="sub">Most services only look for fake profiles. Scammers have moved on to AI video, cloned voices, paid ads and copycat websites.</p>
+<div class="g5">
+<div class="card"><div class="ic">@</div><h3>Impersonator accounts</h3><p>"Backup" and look-alike profiles on Instagram, Facebook, TikTok, YouTube, X, LinkedIn and Threads.</p></div>
+<div class="card"><div class="ic">▶</div><h3>Fake AI videos &amp; photos</h3><p>Deepfake clips and altered photos of your face, posted or boosted.</p></div>
+<div class="card"><div class="ic">≋</div><h3>Voice clones</h3><p>Cloned-voice clips and calls, plus a simple call-back rule so a fake "you" can't move money.</p></div>
+<div class="card"><div class="ic">$</div><h3>Scam ads</h3><p>Ads using your name, face or brand in Meta's and Google's ad libraries.</p></div>
+<div class="card"><div class="ic">⌘</div><h3>Cloned websites</h3><p>Look-alike domains and copycat sites that steal your reviews and take your customers' money.</p></div>
+</div>
+</div></section>
+
+<section id="how"><div class="wrap">
+<h2>How it works</h2>
+<p class="sub">Software does the searching. People make the calls.</p>
+<div class="g4 steps">
+<div class="card step"><div class="ic"></div><h3>Tell us who's real</h3><p>Your official accounts, a few photos, your brand names and domains. Ten minutes.</p></div>
+<div class="card step"><div class="ic"></div><h3>We sweep daily</h3><p>Name and handle variants, reverse-image search, ad libraries and new-domain feeds, every day.</p></div>
+<div class="card step"><div class="ic"></div><h3>A person confirms</h3><p>Fan pages, parody and real namesakes are left alone. Only confirmed fakes get reported.</p></div>
+<div class="card step"><div class="ic"></div><h3>We take it down</h3><p>We file on the right channel for each platform, re-file if it's refused, and send you a weekly report.</p></div>
+</div>
+</div></section>
+
+<section id="who" class="seg"><div class="wrap">
+<h2>Built for anyone whose name is worth stealing</h2>
+<p class="sub">If people trust your face, your voice or your name, someone is already trying to borrow it.</p>
+<div class="g3">
+<div class="card"><h3>Creators &amp; influencers</h3><p>Fake accounts DMing your fans, AI ads selling products you've never touched.</p><div class="q">"Weeks of badgering" to get one fake ad removed. — The Guardian, 2026</div></div>
+<div class="card"><h3>Pastors &amp; ministries</h3><p>Fake pastor accounts asking for "donations," cloned voices calling staff.</p><div class="q">20+ fake TikTok accounts of one priest. — WIRED</div></div>
+<div class="card"><h3>Realtors &amp; brokerages</h3><p>Fake listings under your name, cloned-voice "wiring changed" calls.</p><div class="q">Realtor associations are warning members in 2026.</div></div>
+<div class="card"><h3>Coaches &amp; consultants</h3><p>Deepfake "coach" ads pushing WhatsApp investment groups and fake courses.</p><div class="q">Regulators flag a surge of fake-expert ads.</div></div>
+<div class="card"><h3>Small businesses &amp; brands</h3><p>Copycat websites, fake pages taking deposits, scam ads using your logo.</p><div class="q">A family roofer's site was cloned with AI. — First Alert 4</div></div>
+<div class="card"><h3>Executives &amp; public officials</h3><p>CEO voice-clone wire fraud, fake official accounts, deepfake videos.</p><div class="q">$129M stolen with AI-faked CEOs. — DOJ, Nov 2026</div></div>
+</div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+<h2>Simple pricing</h2>
+<p class="sub">Monthly, cancel anytime. Two months free on annual plans.</p>
+<div class="g4">
+<div class="card price"><h3>Watch</h3><div class="amt">$49<small>/mo</small></div><p>For one person who wants to know.</p><ul><li>1 person · 5 platforms</li><li>Weekly sweep, human-confirmed</li><li>Pre-filled reports you submit in 2 minutes</li><li>"That's not me" post templates</li></ul></div>
+<div class="card price hot"><span class="badge">MOST POPULAR</span><h3>Shield</h3><div class="amt">$99<small>/mo</small></div><p>For one person who wants it handled.</p><ul><li>Daily sweep · 7 platforms</li><li>Up to 10 takedowns a month</li><li>Scam-ad watch (Meta + Google)</li><li>Audience warning kit</li></ul></div>
+<div class="card price"><h3>Team</h3><div class="amt">$249<small>/mo</small></div><p>For a business, church or team.</p><ul><li>1 brand + 3 people</li><li>Cloned-site &amp; look-alike domain watch</li><li>Up to 25 takedowns a month</li><li>Staff voice-clone safety session</li></ul></div>
+<div class="card price"><h3>Executive</h3><div class="amt">$399<small>/mo</small></div><p>For leaders and public officials.</p><ul><li>Same-day priority filing</li><li>Voice &amp; video clone checks</li><li>$490 exposure audit, credited</li><li>Family add-on $49/mo</li></ul></div>
+</div>
+<p class="small" style="margin-top:18px">Brokerages, church networks, talent agencies and associations: group plans from $29 per person/month (20+ people). Already have fakes? One-time cleanup: $199.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Our honest promise</h2>
+<div class="promise">
+<div class="card"><h3>What we do</h3><p>Find the fakes every day, have a person confirm each one, file on the right channel for each platform, follow up, re-file once if refused, and show you exactly what came down.</p></div>
+<div class="card"><h3>What nobody can do</h3><p>Guarantee removal (the platform decides), or unmask who's behind an account (that takes a court order and a lawyer). Anyone who promises either is overpromising. We're a monitoring and reporting service, not a law firm.</p></div>
+</div>
+</div></section>
+
+<section id="check"><div class="wrap">
+<div class="check">
+<div><h2>Free exposure check</h2><p class="sub" style="margin:0">Tell us who to look for. A person checks Instagram, Facebook, TikTok, YouTube and X and emails you every account using your name or photos. No login, no card.</p></div>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks, we\'ll be in touch';">
+<input placeholder="Your name or business name" aria-label="Name" required>
+<input placeholder="Your main handle or website" aria-label="Handle">
+<input type="email" placeholder="Email for the results" aria-label="Email" required>
+<select aria-label="I am a"><option>I'm a creator</option><option>Pastor / ministry</option><option>Realtor / brokerage</option><option>Coach / consultant</option><option>Small business / brand</option><option>Executive / public official</option></select>
+<button class="btn" type="submit" style="width:100%">Run my free check</button>
+</form>
+</div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Questions</h2>
+<details><summary>Do you need my passwords or account access?</summary><p>No. We work entirely from public information. Some platforms ask the real person to confirm with ID; when they do, you send it straight to the platform. We never collect your ID.</p></details>
+<details><summary>Isn't this free on YouTube and TikTok now?</summary><p>Both now offer likeness tools for their own platform, and we'll set them up for you. They don't cover the other platforms, ad libraries, voice calls or copycat websites, and someone still has to read the alerts and file. That's us.</p></details>
+<details><summary>What about fan pages and parody?</summary><p>A person reviews every hit. Fan accounts, clear parody and real people who share your name are left alone.</p></details>
+<details><summary>What do you do with my photos and voice sample?</summary><p>We use them only to spot copies of you, with your written consent, and delete them when you cancel. We never sell them or train AI on them.</p></details>
+<details><summary>How fast do fakes come down?</summary><p>It depends on the platform. We file within one business day of confirming a fake (same day on Executive) and re-check at 24 hours, 72 hours and 7 days.</p></details>
+</div></section>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+<span>© 2026 Likeward. Monitoring and reporting service; not legal advice. Removal decisions are made by each platform.</span>
+<span><a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a></span>
+</div></footer>
+</body></html>
